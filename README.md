@@ -4,3 +4,4 @@ Repositório para códigos e materiais utilizados na disciplina de Desenvolvimen
 ## Neste repositório você pode encontrar:
 
 - [Exemplos trabalhados em aula](Exemplos)
+- [Atividades e desafios](atividades)
