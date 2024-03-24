@@ -31,3 +31,29 @@ const carrinho = [
 
 let desconto = 0.1;
 let frete = 120;
+
+const calcularSubTotal = (carrinho) => {
+  // copiando array com spread operator
+  const itensCarrinho = [...carrinho];
+
+  let subTotal = itensCarrinho.reduce((acc, { preco, qtd }) => acc + preco * qtd, 0);
+
+  return subTotal;
+};
+
+const calcularTotal = (carrinho, frete, desconto) => {
+  let subTotal = calcularSubTotal(carrinho);
+  let total = subTotal * (1 - desconto);
+  total += frete;
+
+  return total;
+};
+
+console.log(calcularSubTotal(carrinho));
+console.log(calcularTotal(carrinho, frete, desconto));
+
+let subTotal = calcularSubTotal(carrinho);
+
+let elSubTotal = document.querySelector(".subtotal-carrinho");
+
+elSubTotal.innerHTML = `<p>Subtotal do carrinho: <span>R$ ${subTotal.toFixed(2)}</span></p>`;
