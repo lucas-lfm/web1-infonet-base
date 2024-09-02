@@ -57,7 +57,7 @@
        <img src="img-instrucoes/screen-pratica-01.png">
    </div>
 
-   - Trata-se de um exemplo simples de listagem de anúncios de carros, onde as informações sobre cada carro anunciado aparecerá em um card na página inicial
+   - Trata-se de um exemplo simples de listagem de anúncios de carros, onde as informações sobre cada carro anunciado aparecerão em um card na página inicial
    - Além disso, será possível realizar uma pesquisa pelo modelo do carro através da barra de pesquisa superior
    - Analisando a imagem acima, podemos pensar nossa aplicação de forma componentizada onde teremos 3 componentes: a própria página inicial (`App.jsx`), o card para cada carro e a barra de pesquisa
 
