@@ -6,10 +6,10 @@
 >
 > - **Objetivo:** ter o primeiro contato com os conceitos principais da biblioteca [React](https://react.dev/) para construção de interfaces de usuário dinâmicas e reativas.
 > - **Observações e Instruções Gerais:**
-> 	- tente seguir o roteiro desta prática de forma a entender cada passo.
->  	- Caso fique com alguma dúvida, fique à vontade para perguntar.
->   	- Você também pode verificar o código final da prática [neste link](app-react-01) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
->    	- Os códigos CSS podem ser simplesmente copiados e colados (não é o foco da nossa disciplina). Já para os códigos JavaScript e JSX, implemente cada passo no seu computador sem utilizar CTRL C + CTRL V 😉.
+>   - tente seguir o roteiro desta prática de forma a entender cada passo.
+>   - Caso fique com alguma dúvida, fique à vontade para perguntar.
+>   - Você também pode verificar o código final da prática [neste link](app-react-01) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
+>   - Os códigos CSS podem ser simplesmente copiados e colados (não é o foco da nossa disciplina). Já para os códigos JavaScript e JSX, implemente cada passo no seu computador sem utilizar CTRL C + CTRL V 😉.
 
 1. Inicialmente é necessário instalar a plataforma [Node.js](https://nodejs.org/pt/download/package-manager), caso ainda não esteja instalada.
 
