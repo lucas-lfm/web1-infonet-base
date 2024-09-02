@@ -5,7 +5,7 @@
 > **_Prática React 01_** - *Primeiros passos com React*
 >
 > - **Objetivo:** ter o primeiro contato com os conceitos principais da biblioteca [React](https://react.dev/) para construção de interfaces de usuário dinâmicas e reativas.
-> - **Observações:** tente seguir o roteiro desta prática de forma a entender cada passo. Caso fique com alguma dúvida, fique à vontade para perguntar. Você também pode, verificar o código final da prática [neste link](app-react-01) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
+> - **Observações:** tente seguir o roteiro desta prática de forma a entender cada passo. Caso fique com alguma dúvida, fique à vontade para perguntar. Você também pode verificar o código final da prática [neste link](app-react-01) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
 
 1. Inicialmente é necessário instalar a plataforma [Node.js](https://nodejs.org/pt/download/package-manager), caso ainda não esteja instalada.
 
