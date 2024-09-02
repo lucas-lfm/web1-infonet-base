@@ -27,7 +27,7 @@
 1. Execute o projeto usando o comando `npm run dev`
 
    - A aplicação será aberta em um navegador (se não abrir, confira o URL local da aplicação no terminal) e o Vite fará **_Hot Module Replacement_** quando algum componente for modificado (atualização automática e instantânea da aplicação)
-   - Observe no navegador a aplicação criada por padrão pelo Vite, depois volte para o VS Code e observer a estrutura de diretórios e arquivos do projeto
+   - Observe no navegador a aplicação criada por padrão pelo Vite, depois volte para o VS Code e observe a estrutura de diretórios e arquivos do projeto
 
    <div style="width: 50%; margin: 0 auto">
        <img src="img-instrucoes/screen-new-project.png">
