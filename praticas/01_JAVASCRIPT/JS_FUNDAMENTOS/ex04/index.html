@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 04</title>
+</head>
+
+<body>
+    <h1>Funções em JavaScript</h1>
+
+    <!-- Podemos inserir um script diretamente no documento HTML, no head ou no body -->
+    <script>
+        // Trabalhando com funções
+
+        // Função tradicional 
+        function somar(n1, n2) {
+            return n1 + n2;
+        }
+
+        function subtrair(n1, n2) {
+            return n1 - n2;
+        }
+
+        function multiplicar(n1, n2) {
+            return n1 * n2;
+        }
+
+        function dividir(n1, n2) {
+            return n1 / n2;
+        }
+
+        function somarArray(arr) {
+            let soma = 0;
+
+            for (let x of arr) {
+                soma += x;
+            }
+
+            return soma;
+        }
+
+        // testando as funções
+        let n1 = 20;
+        let n2 = 15;
+
+        let resultado = somar(n1, n2);
+        console.log("Resultado da soma: ", resultado);
+
+        console.log("Resultado da divisão: ", dividir(n1, n2));
+
+        let arr = [2, 4, 10, 6, 8, 12, 23];
+        console.log("Resultado da soma do array: ", somarArray(arr));
+    </script>
+
+</body>
+
+</html>
