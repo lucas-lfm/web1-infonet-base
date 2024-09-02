@@ -5,3 +5,4 @@ Repositório para códigos e materiais utilizados na disciplina de Desenvolvimen
 
 - [Exemplos trabalhados em aula](Exemplos)
 - [Atividades e desafios](atividades)
+- [Práticas Dirigidas](praticas)
