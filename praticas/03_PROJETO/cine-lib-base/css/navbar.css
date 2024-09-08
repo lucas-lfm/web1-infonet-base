@@ -13,7 +13,11 @@
     align-items: center;
 }
 
-#brand a:hover svg {
+#brand img {
+    width: 1.5rem;
+}
+
+#brand a:hover img {
     opacity: 0.7;
 }
 
