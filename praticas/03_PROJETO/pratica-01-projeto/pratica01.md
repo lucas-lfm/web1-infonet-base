@@ -618,7 +618,7 @@
     - Explicando o código dentro do `useEffect()`:
         - O `useEffect()` recebe dois parâmetros, uma função que será exeutada e um array de dependências que especifica algum elemento que será verificado para saber se a função dentro do `useEffect` deve ou não ser executada.
         - Basicamente criamos uma função assíncrona chamada `buscarFilmes()` que envia uma requisição à API do TMDB (da forma como já fizemos em práticas passadas)
-        - Quando os dados da API são retornados, guardamos em uma contante chamada `dados` e depois usamos a função `setFilmes` para alterar o estado `filmes` definido com o `useState`
+        - Quando os dados da API são retornados, guardamos em uma constante chamada `dados` e depois usamos a função `setFilmes` para alterar o estado `filmes` definido com o `useState`
         - Isso faz com que o estado `filmes` mude e o React entenda que deve atualizar a interface com os novos dados recebidos
         - Depois da definição da função `buscarFilmes`, simplesmente chamamos ela para ser executada
-        - Por fim, o array de dependências passado para o `useEffect` está vazio (`[]`). Isso se deve ao fato de não ter nenhuma dado/estado sendo verificado, ou seja, sempre que o componente for re-renderizado, o `useEffect` será executado e buscará os filmes.
+        - Por fim, o array de dependências passado para o `useEffect` está vazio (`[]`). Isso se deve ao fato de não ter nenhum dado/estado sendo verificado, ou seja, sempre que o componente for re-renderizado, o `useEffect` será executado e buscará os filmes.
