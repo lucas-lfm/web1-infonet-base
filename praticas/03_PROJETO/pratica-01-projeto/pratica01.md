@@ -8,7 +8,7 @@
 > - **Observações e Instruções Gerais:**
 >   - Tente seguir o roteiro desta prática de forma a entender cada passo.
 >   - Caso fique com alguma dúvida, fique à vontade para perguntar.
->   - Você também pode verificar o código final da prática [neste link](cinelib-react-v1) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
+>   - Você também pode verificar o código final da prática [neste link](../cinelib-react-v1) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
 >   - Nesta atividade, praticamente não criaremos código novo. Vamos pegar o código já existente no projeto CineLib (trabalhado em práticas anteriores), que utiliza somente HTML, CSS e JS puros, e migrar para uma apolicação React. Logo, vamos somente organizar os códigos na estrutura do projeto React e adaptar o que for necessário.
 >
 > - ❗ ***Vai usar o CodeSandbox?*** Use o template que eu disponibilizei [nesse link](https://codesandbox.io/p/sandbox/cinelib-react-v1-base-mtr2x9) e faça o Fork para sua conta (a opção de Fork fica na barra de opções no canto superior direito da página).
