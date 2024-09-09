@@ -16,7 +16,7 @@
 
 ### 1. Apresentação do Projeto
 
-1. Vamos trabalhar no proejto CineLib que já iniciamos na disciplina. Implementamos a página inicial do site, onde é feita uma requisição à API do TMDB para buscar os filmes mais populares do momento. 
+1. Vamos trabalhar no projeto CineLib que já iniciamos na disciplina. Implementamos a página inicial do site, onde é feita uma requisição à API do TMDB para buscar os filmes mais populares do momento. 
 
 1. Até o momento, implementamos essa primeira interface e suas funcionalidades somente usando as tecnologias Web básicas.
 
