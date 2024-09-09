@@ -120,7 +120,7 @@
     }
     ```
 
-1. Agora vamos limpar nosso arquivo do componente principal `/src/App.jsx`. Apague as importações que não vamos precisar (deixe somente a importação do arquivo `App.css`), modifique o corpo da função `App()` apagando a linha contendo `const [count, setCount] = useState(0)` e tudo que está dentro do fragment `<></>`. Além disso, vamos alterar definição da função `App()` para usar *arrow function*. Veja como deve ficar o código inicial do arquivo `App.jsx`:
+1. Agora vamos limpar nosso arquivo do componente principal `/src/App.jsx`. Apague as importações que não vamos precisar (deixe somente a importação do arquivo `App.css`), modifique o corpo da função `App()` apagando a linha contendo `const [count, setCount] = useState(0)` e tudo que está dentro do fragment `<></>`. Além disso, vamos alterar a definição da função `App()` para usar *arrow function*. Veja como deve ficar o código inicial do arquivo `App.jsx`:
 
     ```jsx
     import './App.css';
@@ -137,7 +137,7 @@
     ```
 
 1. Ainda no arquivo `App.jsx` vamos definir a estrutura básica da página inicial, de acordo com o código base já criado. 
-    - Observando o arquivo `index.html` do nosso código base, observamos que ele contém uma tag `header` com a barra de navegação, uma tag `main` com o conteúdo principal da página (os cards dos filmes) e uma tag `footer` para o rodapé. 
+    - Observando o arquivo `index.html` do nosso código base, percebemos que ele contém uma tag `header` com a barra de navegação, uma tag `main` com o conteúdo principal da página (os cards dos filmes) e uma tag `footer` para o rodapé. 
     - Como explicado no início deste roteiro, teremos 4 tipos de componentes: a própria página inicial (`App.jsx`), a barra de navegação, o rodapé e o componente que define os cards.
     - Vamos ter, então, um arquivo para definir o componente de barra de navegação, um arquivo para o rodapé e outro para os cards. Logo, no arquivo `App.jsx` só teremos o esqueleto básico da página com as referências para os demais componentes.
     - Dessa forma, o componente `App.jsx`, deve ficar assim:
@@ -240,16 +240,16 @@
    ```
 
    - Perceba que as imagens do logo e do ícone de pesquisa foram importados como recursos. 
-   - Já haviamos inserido a imagem do logo no projeto na pasta `public` (como explicado na [seção 03](#secao03) deste roteiro). Logo basta referenciar como `/cine-lib.svg` (tudo que está na pasta `public` pode ser acessado diretamente somente referenciando a pasta raíz `/`).
+   - Já haviamos inserido a imagem do logo no projeto na pasta `public` (como explicado na [seção 03](#secao03) deste roteiro). Logo, basta referenciar como `/cine-lib.svg` (tudo que está na pasta `public` pode ser acessado diretamente somente referenciando a pasta raíz `/`).
 
     >❗ **Importante**
-    > - Se você está usando o CodeSandBox aqui vai o detalhe que vai tornar seu código, um pouco diferente (bem pouco mesmo rsrs):
+    > - Se você está usando o CodeSandBox aqui vai o detalhe que vai tornar seu código um pouco diferente (bem pouco mesmo rsrs):
     >   - Você já deve ter incluído o logo da aplicação na pasta `/src/assets`. Dessa forma, aqui no componente `NavBar`, você vai referenciar essa pasta (`/src/assets`) e não a pasta `public`.
     >   - Isso se deve ao fato do projeto no CodeSandbox usar um empacotador diferente do Vite.
     >   - A linha onde você importa a imagem do logo `cine-lib.svg` ficará assim: `import cinelibLogo from "./../assets/cine-lib.svg";`
     >   - Pode seguir sem medo agora, o restante é exatamente igual 😉.
 
-   - As demais imagens, colocadas em `/src/assets`, podem ser referenciadas usando o caminho relativo. Nesse caso, ficou `./../assets/search-icon.svg`, pois como o arquivo que faz a importação, `NavBar.jsx`, está na pasta `components`. Logo, precisamos voltar um nível de pasta (com `../`) para acessar a pasta `assets`.
+   - As demais imagens, colocadas em `/src/assets`, podem ser referenciadas usando o caminho relativo. Nesse caso, ficou `./../assets/search-icon.svg`. Como o arquivo que faz a importação dos recursos, `NavBar.jsx`, está na pasta `components`, precisamos voltar um nível de pasta (com `../`) para acessar a pasta `assets`.
    - Perceba também que na importação desses recursos, damos um nome (variável) para referenciá-los no código. Então, quando necessitamos referenciar a imagem do logo, por exemplo, dentro do código JSX, fazemos isso através da interpolação de código JavaScript: `{cinelibLogo}`.
 
 1. Para finalizar o componente `NavBar`, vamos ao arquivo de estilos `NavBar.css` e inserir o conteúdo do arquivo `navbar.css` do código base do projeto, como mostrado a seguir: 
@@ -308,7 +308,7 @@
 1. Agora vamos à definição do componente relativo ao rodapé:
 
     - Crie os arquivos `Footer.jsx` e `Footer.css` dentro da pasta `components`
-    - No arquivo `Footer.jsx` já importe o arquivo de estilos `Footer.css`, defina a estrutura básica do componente com uma **arrow function** e exporte o componente ao final.
+    - No arquivo `Footer.jsx` já importe o arquivo de estilos `Footer.css`, defina a estrutura básica do componente com uma *arrow function* e exporte o componente ao final.
     - A estrutura do rodapé é bastante simples, teremos apenas dois parágrafos dentro de um elemento `footer` (como definido no código base do projeto). Veja como deve ficar o código do arquivo `Footer.jsx`:
 
       ```jsx
@@ -344,7 +344,7 @@
     }
     ```
 
-1. Para finalizar esta seção, vamos importar para o arquivo `App.jsx` os componentes criados e colocá-los nos locais correspondentes. O código atualizado para o arquivo `App.jsx` deve ficar assim:
+1. Para finalizar esta seção, vamos importar para o arquivo `App.jsx`, os componentes criados e colocá-los nos locais correspondentes. O código atualizado para o arquivo `App.jsx` deve ficar assim:
 
     ```jsx
     import './App.css';
@@ -416,7 +416,7 @@
         - É importante entender que os atributos desse objeto são definidos na API do TMDB e devemos respeitar seus nomes para referenciá-los (por exemplo, para pegar a imagem de divulgação, usamos o atributo `poster_path`).
         - Por fim, vale lembrar que um componente React é definido com `JSX` (extensão da linguagem JavaScript), que permite "misturar" código HTML com JavaScript. Assim, quando queremos declarar um código JavaScript no meio do código HTML, precisamos delimitar com chaves `{}`, como mostrado no código acima, por exemplo, para pegar os valores dos atributos da **props** `filme`.
 
-1. Agora, para concluir a definição do componente `Card` basta inserir as regras de estilização desse componente no arquivo `Card.css`. As regras CSS para esse componente estão no arquivo `home.css` do código base, mas trago ele a seguir:
+1. Agora, para concluir a definição do componente `Card`, basta inserir as regras de estilização desse componente no arquivo `Card.css`. As regras CSS para esse componente estão no arquivo `home.css` do código base, mas trago ele a seguir:
 
     ```css
     .movie-card {
@@ -459,7 +459,7 @@
 
 1. Para testar se o componente foi definido de forma correta, vamos simular dados de filmes antes de implementar a chamada à API.
 
-    - Volte ao arquivo `App.jsx` e crie um arry de objetos após a seção de `imports` e antes da definição da *arrow function* do componente. Veja um exemplo de dados em um array de objetos e ó código completo do arquivo `App.jsx`:
+    - Volte ao arquivo `App.jsx` e crie um array de objetos após a seção de `imports` e antes da definição da *arrow function* do componente. Veja um exemplo de dados em um array de objetos e o código completo do arquivo `App.jsx` até o momento:
 
       ```jsx
       import './App.css';
@@ -518,7 +518,7 @@
 
     - Veja que importamos o arquivo `Card.jsx` para usar o componente `Card` e definimos um array de objetos com dados fictícios de filmes. 
     - Além disso, dentro da div de classe `movies-container`, implementamos a lógica necessára para percorrer todo o array de filmes com o método `map`:
-      - em cada iteração, chamamos o elemento atual do array de `filme` e inserimos um componente `Card` passando o `id` do filme para o atributo `key` (atributo obrigatório no React quando criamos uma lista de um mesmo componente)
+      - em cada iteração, chamamos de `filme` o elemento atual do array e inserimos um componente `Card` passando o `id` do filme para o atributo `key` (atributo obrigatório no React quando criamos uma lista de um mesmo componente)
       - passamos também o objeto `filme` como **props** para o componente (lembre que o componente `Card` recebe uma **prop** com nome `filme`).
     
     - Isso já deve ser suficiente para obtermos o seguinte resultado:
@@ -534,9 +534,9 @@
 1. Agora vamos trabalhar com um recurso muito importante do React: `hooks`
 
     - Os hooks no React são funções que permitem o uso de vários recursos do React de forma simples e possibilitam gerenciar estados da aplicação. Veja mais [aqui](https://www.alura.com.br/artigos/react-hooks).
-    - Pense nos hooks como códigos prontos que nos permitem executar ações que sem eles seriam bastante trabalhosas. Com os hooks, podemos gerenciar dados da nossa aplicação, acessar informações em diversas partes dela (através de contextos) e gerenciar melhor requisições a APIs, renderização de componentes e uso de memória.
+    - Pense nos hooks como códigos prontos que nos permitem executar ações que, sem eles, seriam bastante trabalhosas. Com os hooks, podemos gerenciar dados da nossa aplicação, acessar informações em diversas partes dela (através de contextos) e gerenciar melhor as requisições a APIs, renderização de componentes e uso de memória, por exemplo.
 
-1. No nosso arquivo `App.jsx`, vamos apagar o arrar de objetos `filmes` criados anteriormente para teste
+1. No nosso arquivo `App.jsx`, vamos apagar o array de objetos `filmes` criados anteriormente para teste
 
 1. Vamos criar duas constantes, logo após a área dos `imports`: uma para definir um objeto `options` com a configuração da requisição à API do TMDB (método e token de acesso); e outra para guardar a URL base para a requisição de filmes populares à API
     - Esses dados estão no arquio `main.js` do código base
@@ -587,14 +587,14 @@
     export default App;
     ```
 
-    - Lembre-se de trocar `SEU_TOKEN`, no atributo `Authorization` pelo seu token de acesso à API do TMDB
+    - Lembre-se de trocar `SEU_TOKEN`, no atributo `Authorization`, pelo seu token de acesso à API do TMDB
     - Nesse ponto, provavelmente sua aplicação estará indicando um erro (é normal, pode seguir)
 
-1. Agora vamos definir uma variável de estado para armazenar os dados dos filmes que a API retornar. Para isso, vamos usar o hook `useState()`. Com ele, definimos o nome de estado (variável) e o nome de uma função para alterar esse estado. No nosso caso, vai ficar assim: `const [filmes, setFilmes] = useState([])`
+1. Agora, vamos definir uma variável de estado para armazenar os dados dos filmes que a API retornar. Para isso, vamos usar o hook `useState()`. Com ele, definimos o nome de estado (variável) e o nome de uma função para alterar esse estado. No nosso caso, vai ficar assim: `const [filmes, setFilmes] = useState([])`
     - O código acima deve ser inserido logo acima do `return` da função do componente `App.jsx`
-    - Aqui estamos definindo umestado chamado `filmes` e uma função para açterar esse estado chamada `setFilmes`
+    - Aqui estamos definindo um estado chamado `filmes` e uma função, para alterar esse estado, chamada `setFilmes`
 
-1. Por fim, vamos usar o hook `useEffect` para possibilitar sincronizar nossa aplicação com a API do TMDB, executando a função `fetch` (de envio da requisição) sempre que o componente for re-renderizado. A sintaxe é apresentada a seguir e o código deve ser colocado abaixo da definição do estado (feito no passo anterior) e antes do `return` co componente. Veja como deve ficar o código final do arquivo `App.jsx`:
+1. Por fim, vamos usar o hook `useEffect` para possibilitar sincronizar nossa aplicação com a API do TMDB, executando a função `fetch` (de envio da requisição) sempre que o componente for re-renderizado. A sintaxe é apresentada a seguir e o código deve ser colocado abaixo da definição do estado (feito no passo anterior) e antes do `return` do componente. Veja como deve ficar o código final do arquivo `App.jsx`:
 
     ```jsx
     ...
@@ -647,9 +647,9 @@
 
     - O código acima da linha `const App = () => {` foi omitido (não mudou)
     - Explicando o código dentro do `useEffect()`:
-        - O `useEffect()` recebe dois parâmetros, uma função que será exeutada e um array de dependências que especifica algum elemento que será verificado para saber se a função dentro do `useEffect` deve ou não ser executada.
-        - Basicamente criamos uma função assíncrona chamada `buscarFilmes()` que envia uma requisição à API do TMDB (da forma como já fizemos em práticas passadas)
+        - O `useEffect()` recebe dois parâmetros: uma função que será executada e um array de dependências que especifica algum elemento que será verificado para saber se a função dentro do `useEffect` deve ou não ser executada.
+        - Basicamente, criamos uma função assíncrona chamada `buscarFilmes()` que envia uma requisição à API do TMDB (da forma como já fizemos em práticas passadas)
         - Quando os dados da API são retornados, guardamos em uma constante chamada `dados` e depois usamos a função `setFilmes` para alterar o estado `filmes` definido com o `useState`
         - Isso faz com que o estado `filmes` mude e o React entenda que deve atualizar a interface com os novos dados recebidos
         - Depois da definição da função `buscarFilmes`, simplesmente chamamos ela para ser executada
-        - Por fim, o array de dependências passado para o `useEffect` está vazio (`[]`). Isso se deve ao fato de não ter nenhum dado/estado sendo verificado, ou seja, sempre que o componente for re-renderizado, o `useEffect` será executado e buscará os filmes.
+        - Por fim, o array de dependências passado para o `useEffect` está vazio (`[]`). Isso se deve ao fato de não ter nenhum dado/estado sendo verificado. Ou seja, sempre que o componente for re-renderizado, o `useEffect` será executado e buscará os filmes.
