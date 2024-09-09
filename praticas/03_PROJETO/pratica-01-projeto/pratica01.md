@@ -9,12 +9,31 @@
 >   - Tente seguir o roteiro desta prática de forma a entender cada passo.
 >   - Caso fique com alguma dúvida, fique à vontade para perguntar.
 >   - Você também pode verificar o código final da prática [neste link](cinelib-react-v1) (porém, entenda que esse é um recurso auxiliar, tente realizar a prática somente seguindo este roteiro).
->   - Nesta atividade, praticamente não criearemos código novo. Vamos pegar o código já existente no projeto CineLib (trabalhado em práticas anteriores), que utiliza somente HTML, CSS e JS puros, e migrar para uma apolicação React. Logo, vamos somente organizar os códigos na estrutura do projeto React e adaptar o que for necessário.
+>   - Nesta atividade, praticamente não criaremos código novo. Vamos pegar o código já existente no projeto CineLib (trabalhado em práticas anteriores), que utiliza somente HTML, CSS e JS puros, e migrar para uma apolicação React. Logo, vamos somente organizar os códigos na estrutura do projeto React e adaptar o que for necessário.
+>
+> - ❗ ***Vai usar o CodeSandbox?*** Use o template que eu disponibilizei [nesse link](https://codesandbox.io/p/sandbox/cinelib-react-v1-base-mtr2x9) e faça o Fork para sua conta (a opção de Fork fica na barra de opções no canto superior direito da página).
+> - Vamos ter um detalhe que será diferente caso esteja usando o CodeSandbox. Então, **fique atento!** Avisarei quando for necessário.
+
+### 1. Apresentação do Projeto
+
+1. Vamos trabalhar no proejto CineLib que já iniciamos na disciplina. Implementamos a página inicial do site, onde é feita uma requisição à API do TMDB para buscar os filmes mais populares do momento. 
+
+1. Até o momento, implementamos essa primeira interface e suas funcionalidades somente usando as tecnologias Web básicas.
+
+1. O objetivo desta prática é, então, migrar nossa aplicação para um projeto React.
+
+1. Veja o resultado que já alcançamos para a interface da aplicação e que queremos replicar, agora usando React:
+
+    <div style="width: 90%; margin: 0 auto">
+      <img src="img-instrucoes/screen-final.png">
+    </div>
+
+1. Antes de mais nada, vamos pensar de forma "componentizada". Olhando para a interface acima, podemos perceber a presença de, pelo menos, três componentes básicos: a barra de navegação superior, os cards e o rodapé. Logo, vamos estruturar nossa aplicação React com base nisso, lembrando que a própria página inicial será um componente da nossa aplicação React.
 
 ### 2. Criando o Projeto React no VS Code
 
 > ❗ **Avisos:**
-> - Se você for utilizar a plataforma online CodeSandBox, pode pular essa seção.
+> - Se você for utilizar a plataforma online CodeSandbox, pode pular essa seção.
 > - Vou explicar de forma mais objetiva aqui, pressumindo que vocês já entendem esse processo de criação do projeto e a estrutura básica criada. Em caso de dúvidas, consulte a prática <a href="./../../02_REACT/pratica-01-react/pratica01.md" target="_blank">"Prática React 01: Primeiros passos com React"</a>, realizada anteriormente.
 
 1. Crie uma pasta para organizar as práticas do projeto final da disciplina, pode dar o nome de `projeto-final`
@@ -45,6 +64,9 @@
         - para isso, pegue o arquivo `cine-lib.svg` que está na pasta `img` do projeto base (aberto anteriormente) e coloque-o dentro da pasta `public` do projeto React criado na seção anterior
         - feito isso, modifique a linha `<link rel="icon" type="image/svg+xml" href="/vite.svg" />`, no arquivo `index.html`, alterando o nome do ícone `vite.svg` para `cine-lib.svg`
     - informar uma descrição da nossa aplicação com a seguinte tag a ser inserida na seção `head` do arquivo `index.html`: `<meta name="description" content="Confira os maiores sucessos do cinema mundial">`
+
+    - > ❗ Está usando o `CodeSandbox`? Se liga 👇
+      > - Você vai precisar colocar o arquivo do logo da aplicação (`cine-lib.svg`) também na pasta `/src/assets`. Mais adiante explico o porquê.
 
 1. Veja como deve ficar o arquivo `index.html`:
 
@@ -175,6 +197,7 @@
 > ❗ **Importante**
 > - Antes de mais nada, como vamos precisar das imagens estáticas dos ícones de pesquisa (que será usado na barra de navegação) e de estrela (que será usado nos cards), precisamos colocar esses recursos no nosso projeto.
 > - Para isso, pegue os arquivos `search-icon.svg` e `star-icon.svg` que estão dentro da pasta `img` do código base (<a href="./../cine-lib-base/img/">acesse aqui</a>) e coloque-os dentro da pasta `/src/assets` do projeto React criado.
+> - ❗ Se você está usando o CodeSandbox, já falei que também seria necessário incluir o arquivo `cine-lib.svg` na pasta `/src/assets`. Se ainda não fez isso, a hora é agora 😉.
 
 1. Agora que já temos a estrutura básica da página inicial, vamos criar nossos componentes para a barra de navegação, para os cards e para o rodapé. Para isso, vamos criar uma pasta chamada `components` dentro da pasta `src`.
 
@@ -218,6 +241,14 @@
 
    - Perceba que as imagens do logo e do ícone de pesquisa foram importados como recursos. 
    - Já haviamos inserido a imagem do logo no projeto na pasta `public` (como explicado na [seção 03](#secao03) deste roteiro). Logo basta referenciar como `/cine-lib.svg` (tudo que está na pasta `public` pode ser acessado diretamente somente referenciando a pasta raíz `/`).
+
+    >❗ **Importante**
+    > - Se você está usando o CodeSandBox aqui vai o detalhe que vai tornar seu código, um pouco diferente (bem pouco mesmo rsrs):
+    >   - Você já deve ter incluído o logo da aplicação na pasta `/src/assets`. Dessa forma, aqui no componente `NavBar`, você vai referenciar essa pasta (`/src/assets`) e não a pasta `public`.
+    >   - Isso se deve ao fato do projeto no CodeSandbox usar um empacotador diferente do Vite.
+    >   - A linha onde você importa a imagem do logo `cine-lib.svg` ficará assim: `import cinelibLogo from "./../assets/cine-lib.svg";`
+    >   - Pode seguir sem medo agora, o restante é exatamente igual 😉.
+
    - As demais imagens, colocadas em `/src/assets`, podem ser referenciadas usando o caminho relativo. Nesse caso, ficou `./../assets/search-icon.svg`, pois como o arquivo que faz a importação, `NavBar.jsx`, está na pasta `components`. Logo, precisamos voltar um nível de pasta (com `../`) para acessar a pasta `assets`.
    - Perceba também que na importação desses recursos, damos um nome (variável) para referenciá-los no código. Então, quando necessitamos referenciar a imagem do logo, por exemplo, dentro do código JSX, fazemos isso através da interpolação de código JavaScript: `{cinelibLogo}`.
 
