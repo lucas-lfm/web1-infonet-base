@@ -1,0 +1,5 @@
+.backdrop {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
