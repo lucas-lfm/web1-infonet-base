@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "./Filme.css";
 import { useFetch } from "../../hooks/useFetch";
 import Banner from "../../components/Banner";
+import Details from "../../components/Details";
 
 const URL_FETCH = "https://api.themoviedb.org/3/movie/";
 
@@ -14,9 +15,10 @@ const Filme = () => {
   return (
     <div id='filme'>
       {filme && (
-        <div className='backdrop'>
-          <Banner title={filme.title} backdropPath={filme.backdrop_path} />
-        </div>
+        <>
+          <Banner filme={filme} />
+          <Details filme={filme} />
+        </>
       )}
     </div>
   );
