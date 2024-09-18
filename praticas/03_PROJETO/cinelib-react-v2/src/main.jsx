@@ -8,6 +8,7 @@ import Home from './pages/Home/Home.jsx';
 import Filme from './pages/Filme/Filme.jsx';
 
 import './index.css';
+import Search from './pages/Search/Search.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: "/filme/:id",
         element: <Filme />,
       },
+      {
+        path: "/search",
+        element: <Search />,
+      }
     ]
   }
 ]);

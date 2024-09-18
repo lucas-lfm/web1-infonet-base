@@ -15,8 +15,16 @@ const Details = ({ filme }) => {
   const [trailer, setTrailer] = useState(null);
 
   useEffect(() => {
-    if(videos) {
-        setTrailer(videos.results.filter(video => video.type === "Trailer")[0].key);
+    if (videos) {
+      const trailers = videos.results.filter(
+        (video) => video.type === "Trailer"
+      );
+
+      if (trailers.length > 0) {
+        setTrailer(
+          trailers[0].key
+        );
+      }
     }
   }, [videos]);
 

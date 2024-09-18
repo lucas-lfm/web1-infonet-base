@@ -11,7 +11,7 @@ const Card = ( { filme } ) => {
         <p>
             <img src={starIcon} alt="Ícone de estrela para indicar nota de avaliação" /> {filme.vote_average.toFixed(2)}
         </p>
-        <Link to={`filme/${filme.id}`}>Detalhes</Link>
+        <Link to={`/filme/${filme.id}`}>Detalhes</Link>
     </div>
   );
 };
